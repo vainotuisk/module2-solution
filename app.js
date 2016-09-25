@@ -3,7 +3,8 @@
 
 angular.module('ShoppingListCheckOff', [])
 .controller('AlreadyBoughtShoppingController', AlreadyBoughtShoppingController)
-.controller('ToBuyShoppingController', ToBuyShoppingController);
+.controller('ToBuyShoppingController', ToBuyShoppingController)
+.service('ShoppingListCheckOffService', ShoppingListCheckOffService);
 
 
 
