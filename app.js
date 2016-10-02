@@ -30,7 +30,7 @@ angular.module('ShoppingListCheckOff', [])
 AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
 function AlreadyBoughtController(ShoppingListCheckOffService) {
 var boughtController = this;
-boughtController.boughtlist = ShoppingListCheckOffService.getBoughtlist();
+boughtController.boughtList = ShoppingListCheckOffService.getBoughtlist();
 };
 
 // Controller for tobuy items
@@ -59,6 +59,7 @@ function ShoppingListCheckOffService() {
   };
 
   service.getBoughtlist = function () {
+    console.log("osta vaja: ", boughtList);
     return boughtList;
   };
   service.buyItem = function(itemIdex) {
@@ -66,21 +67,6 @@ function ShoppingListCheckOffService() {
     tobuyList.splice(itemIdex,1);
   };
 
-  service.addItem = function (itemName, quantity) {
-    var item = {
-      name: itemName,
-      quantity: quantity
-    };
-    items.push(item);
-  };
-
-  service.removeItem = function (itemIdex) {
-    items.splice(itemIdex, 1);
-  };
-
-  service.getItems = function () {
-    return items;
-  };
 }
 
 
