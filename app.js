@@ -38,7 +38,6 @@ ToBuyController.$inject = ['ShoppingListCheckOffService'];
 function ToBuyController(ShoppingListCheckOffService) {
 var buyController = this;
 buyController.buylist = ShoppingListCheckOffService.getbuyList();
-console.log('otsitav:' + buyController.buylist );
 buyController.buyItem = function(itemIdex) {
   ShoppingListCheckOffService.buyItem(itemIdex);
 
@@ -53,9 +52,9 @@ function ShoppingListCheckOffService() {
   // List of shopping items
   var tobuyList = initialList;
 
+// List of bought items
   var boughtList = [];
   service.getbuyList = function () {
-    console.log(tobuyList);
     return tobuyList;
   };
 
