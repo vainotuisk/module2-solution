@@ -17,6 +17,10 @@ var initialList = [
   {
     name: "Chocolate",
     quantity: "5"
+  },
+  {
+    name: "Beer",
+    quantity: "6"
   }
 ];
 
